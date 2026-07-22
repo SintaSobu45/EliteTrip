@@ -475,7 +475,7 @@ body.no-scroll {
 }
 
 /* ==========================================================================
-   6. RESPONSIVE BREAKPOINTS (Configured for exactly 2 cards side-by-side on mobile view)
+   6. RESPONSIVE BREAKPOINTS (Clean 2x2 Grid Layout for Mobile)
    ========================================================================== */
 @media (max-width: 1024px) {
   .whitetrip-nav-links {
@@ -493,31 +493,24 @@ body.no-scroll {
     margin-bottom: 28px;
   }
 
-  /* Exactly 2 cards per view using a snap-scroll track */
+  /* Clean 2-column grid so all 4 cards fit neatly without overlapping or breaking layout */
   .whitetrip-categories-wrapper {
     display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc(50% - 6px);
-    justify-content: flex-start;
-    gap: 12px;
-    overflow-x: auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-content: center;
     padding: 4px 4px 16px 4px;
-    margin: 0 -10px;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .whitetrip-categories-wrapper::-webkit-scrollbar {
-    display: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
   }
 
   .whitetrip-category-chip {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
     width: 100%;
     padding: 10px 12px;
     border-radius: 16px;
+    box-sizing: border-box;
   }
 
   .whitetrip-chip-text span.name {
