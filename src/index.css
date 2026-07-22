@@ -1,0 +1,82 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* ==========================================
+   ELITETRIP LUXURY MICRO-ANIMATIONS
+   ========================================== */
+
+/* 1. Smooth Image Hover Zoom for Property Cards & Banners */
+.list-villa-img-wrap img,
+.property-card img,
+.stay-card img,
+.resort-card img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.list-villa-img-wrap:hover img,
+.property-card:hover img,
+.stay-card:hover img,
+.resort-card:hover img {
+  transform: scale(1.05);
+}
+
+.list-villa-img-wrap,
+.property-card,
+.stay-card {
+  overflow: hidden;
+}
+
+/* 2. Buttery-Smooth Mobile Menu Drawer Slide & Backdrop Fade */
+.whitetrip-drawer-overlay {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.whitetrip-drawer-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.whitetrip-mobile-drawer {
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.whitetrip-mobile-drawer.open {
+  transform: translateX(0);
+}
+
+/* 3. Graceful Fade and Upward Glide for Testimonials / Stories */
+.story-text,
+.story-author {
+  transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
+}
+
+.story-text.fade-out,
+.story-author.fade-out {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+/* 4. Elegant Pulse Effect for Call/Help Buttons on Hover */
+.whitetrip-call-btn,
+.whitetrip-help-link {
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whitetrip-call-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(11, 56, 32, 0.15);
+}

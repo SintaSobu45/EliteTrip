@@ -1,0 +1,291 @@
+/* ==========================================================================
+   WHY WHITETRIP / PILLARS SECTION STYLES (FULL SOLID COLOR BOX)
+   ========================================================================== */
+
+.whitetrip-pillar-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.whitetrip-pillar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Header Group */
+.pillar-header-group {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.pillar-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(13, 148, 136, 0.12);
+  color: #0d9488;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+  border: 1px solid rgba(13, 148, 136, 0.3);
+}
+
+.pillar-main-title {
+  font-size: 2.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.pillar-subtitle {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Showcase Grid Box with Full Deep Slate/Navy Background */
+.pillar-showcase-box {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  background: #0f172a;
+  /* Full Solid Dark Background */
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Tabs List (Left Side) */
+.pillar-tabs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.02);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  justify-content: center;
+}
+
+.pillar-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.pillar-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Active Tab Highlight Upgrade */
+.pillar-tab-btn.active {
+  background: rgba(245, 158, 11, 0.12);
+  /* Glowing Amber Tint */
+  border-color: #f59e0b;
+  /* Striking Amber/Gold Border */
+  box-shadow: 0 12px 28px rgba(245, 158, 11, 0.2);
+}
+
+.tab-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s;
+}
+
+.pillar-tab-btn.active .tab-icon-wrap {
+  background: #f59e0b;
+  /* Solid Amber Highlight */
+  color: #ffffff;
+  /* High contrast white icon */
+}
+
+.tab-text-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tab-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.tab-subtitle {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* Content Pane (Right Side) */
+.pillar-content-pane {
+  padding: 48px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+}
+
+.pane-inner-animation {
+  width: 100%;
+  animation: fadeInPane 0.4s ease-in-out;
+}
+
+@keyframes fadeInPane {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pane-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(245, 158, 11, 0.15);
+  /* Matching Amber Tag Background */
+  color: #fcd34d;
+  /* Warm Amber Text for Contrast */
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.pane-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  line-height: 1.25;
+}
+
+.pane-description {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.7;
+  margin: 0 0 28px 0;
+}
+
+.pane-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 28px;
+}
+
+.pane-stats-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.stat-number-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-val {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f59e0b;
+  /* Vibrant Amber Stat Number */
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.stat-lbl {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.pane-perks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.perk-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.perk-row svg {
+  color: #34d399;
+  /* Bright Teal/Green Checkmark Accent */
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 900px) {
+  .pillar-showcase-box {
+    grid-template-columns: 1fr;
+  }
+
+  .pillar-tabs-list {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    gap: 8px;
+  }
+
+  .pillar-tab-btn {
+    padding: 14px;
+  }
+
+  .pillar-content-pane {
+    padding: 36px 24px;
+  }
+
+  .pillar-main-title {
+    font-size: 1.85rem;
+  }
+
+  .pane-stats-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

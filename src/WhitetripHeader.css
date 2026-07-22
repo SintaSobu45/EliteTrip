@@ -1,0 +1,569 @@
+/* ==========================================================================
+   1. HEADER & HERO CONTAINER
+   ========================================================================== */
+.whitetrip-header-container {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 140px 20px 80px 20px;
+  transition: background-image 1.2s ease-in-out;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+/* Dark overlay for contrast */
+.whitetrip-header-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.75));
+  z-index: 1;
+}
+
+/* ==========================================================================
+   2. TOP NAVBAR
+   ========================================================================== */
+.whitetrip-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 48px;
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+  box-sizing: border-box;
+}
+
+.whitetrip-navbar.scrolled {
+  background-color: #1e293b;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 12px 48px;
+}
+
+/* Logo Group */
+.whitetrip-logo-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  gap: 4px;
+}
+
+.whitetrip-logo-circle {
+  width: 80px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navigation Links (Desktop) */
+.whitetrip-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.whitetrip-nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.whitetrip-nav-links a:hover {
+  opacity: 0.8;
+}
+
+.whitetrip-help-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Right Actions */
+.whitetrip-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.whitetrip-call-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.whitetrip-call-btn:hover {
+  background-color: white;
+  color: #1e293b;
+}
+
+.whitetrip-menu-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+/* Container fixed to the bottom right corner */
+.whitetrip-floating-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Scroll to top button */
+.whitetrip-scroll-top-btn {
+  width: 45px;
+  height: 45px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.whitetrip-scroll-top-btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* WhatsApp floating button */
+.whitetrip-whatsapp-btn {
+  width: 55px;
+  height: 55px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+  text-decoration: none;
+}
+
+.whitetrip-whatsapp-btn:hover {
+  transform: scale(1.08);
+}
+
+/* ==========================================================================
+   3. MOBILE SIDE DRAWER / SLIDE-OUT MENU
+   ========================================================================== */
+.whitetrip-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.whitetrip-drawer-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.whitetrip-mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 280px;
+  max-width: 85vw;
+  height: 100dvh;
+  max-height: 100vh;
+  background-color: #ffffff;
+  z-index: 2001;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: -6px 0 20px rgba(0, 0, 0, 0.25);
+  transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+}
+
+.whitetrip-mobile-drawer.open {
+  right: 0;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 18px;
+  background-color: #1e293b;
+  color: white;
+  flex-shrink: 0;
+}
+
+.drawer-auth-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.drawer-auth-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.auth-separator {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+}
+
+.drawer-close-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.drawer-nav-links {
+  flex: 1 1 auto;
+  overflow: hidden;
+  padding: 2px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.drawer-nav-links a {
+  padding: 6px 18px;
+  color: #1e293b;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.drawer-nav-links a:hover {
+  background-color: #f1f5f9;
+  color: #3b82f6;
+}
+
+.drawer-footer {
+  padding: 10px 18px;
+  background-color: #ffffff;
+  border-top: 1px solid #f1f5f9;
+  flex-shrink: 0;
+}
+
+.drawer-hosting-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #d1d5db;
+  color: #1e293b;
+  padding: 9px 0;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.drawer-hosting-btn:hover {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+/* ==========================================================================
+   4. HERO CONTENT & CHIPS
+   ========================================================================== */
+.whitetrip-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.whitetrip-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.whitetrip-hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.whitetrip-hero-subtitle {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin: 0 auto 40px auto;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* Modern Category Chips Grid */
+.whitetrip-categories-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.whitetrip-category-chip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 12px 20px;
+  border-radius: 9999px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.whitetrip-category-chip:hover {
+  background: rgba(30, 41, 59, 0.85);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+.whitetrip-category-chip.active {
+  background: #ffffff;
+  color: #1e293b;
+  border-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.25);
+}
+
+.whitetrip-chip-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b82f6;
+  transition: background 0.3s, color 0.3s;
+  flex-shrink: 0;
+}
+
+.whitetrip-category-chip.active .whitetrip-chip-icon {
+  background: #eff6ff;
+  color: #3b82f6;
+}
+
+.whitetrip-chip-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.whitetrip-chip-text span.name {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.whitetrip-chip-text span.count {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.whitetrip-category-chip.active .whitetrip-chip-text span.count {
+  color: #64748b;
+}
+
+/* Carousel Progress Indicators */
+.whitetrip-bg-indicators {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.whitetrip-bg-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.whitetrip-bg-dot.active {
+  width: 24px;
+  background: #ffffff;
+}
+
+/* ==========================================================================
+   5. GLOBAL BODY LOCK
+   ========================================================================== */
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE BREAKPOINTS (Configured for exactly 2 cards side-by-side on mobile view)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .whitetrip-nav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .whitetrip-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .whitetrip-hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 28px;
+  }
+
+  /* Exactly 2 cards per view using a snap-scroll track */
+  .whitetrip-categories-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(50% - 6px);
+    justify-content: flex-start;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 4px 4px 16px 4px;
+    margin: 0 -10px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .whitetrip-categories-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .whitetrip-category-chip {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 16px;
+  }
+
+  .whitetrip-chip-text span.name {
+    font-size: 0.8rem;
+  }
+
+  .whitetrip-chip-text span.count {
+    font-size: 0.68rem;
+  }
+
+  .whitetrip-chip-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .whitetrip-header-container {
+    padding-top: 140px;
+    padding-bottom: 60px;
+  }
+
+  .whitetrip-navbar {
+    padding: 12px 16px;
+  }
+
+  .whitetrip-navbar.scrolled {
+    padding: 10px 16px;
+  }
+
+  .whitetrip-call-btn span {
+    display: none;
+  }
+
+  .whitetrip-call-btn {
+    padding: 8px;
+    border-radius: 50%;
+  }
+
+  .whitetrip-hero-badge {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+    margin-bottom: 14px;
+  }
+
+  .whitetrip-hero-title {
+    font-size: 1.8rem;
+  }
+}

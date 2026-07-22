@@ -1,0 +1,311 @@
+/* ==========================================================================
+   ENQUIRY SECTION - MATCHING DARK SLATE / AMBER HIGHLIGHT PALETTE
+   ========================================================================== */
+
+.enquiry-master-section {
+  position: relative;
+  max-width: 1240px;
+  margin: 60px auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.enquiry-wrapper {
+  position: relative;
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.12);
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+/* Left Hero & Visual Pane (Matching Dark Slate #0f172a theme with Amber Highlights) */
+.enquiry-hero-pane {
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.pane-content-overlay {
+  position: relative;
+  z-index: 2;
+}
+
+.pane-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245, 158, 11, 0.15);
+  color: #fcd34d;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.pane-headline {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 14px 0;
+  color: #ffffff;
+}
+
+.pane-desc {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+}
+
+.perks-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.perk-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.perk-badge-item svg {
+  color: #34d399;
+  flex-shrink: 0;
+}
+
+.pane-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pane-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.image-fade-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.7) 0%, transparent 60%);
+}
+
+/* Right Form Pane */
+.enquiry-form-pane {
+  padding: 48px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-pane-header {
+  margin-bottom: 24px;
+}
+
+.form-pane-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+}
+
+.form-pane-header p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Form Grid Styling */
+.form-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.input-group-modern {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-prefix-icon {
+  position: absolute;
+  left: 14px;
+  color: #94a3b8;
+  pointer-events: none;
+  transition: color 0.2s;
+}
+
+.input-group-modern input,
+.input-group-modern select {
+  width: 100%;
+  padding: 12px 14px 12px 42px;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  color: #1e293b;
+  outline: none;
+  transition: all 0.2s ease;
+  appearance: none;
+}
+
+.input-group-modern select {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 14px;
+  cursor: pointer;
+}
+
+.input-group-modern input::placeholder {
+  color: #94a3b8;
+}
+
+.input-group-modern input:focus,
+.input-group-modern select:focus {
+  border-color: #f59e0b;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+}
+
+.input-group-modern input:focus+.input-prefix-icon,
+.input-group-modern select:focus+.input-prefix-icon {
+  color: #f59e0b;
+}
+
+/* Submit Button (Amber Highlight Accent) */
+.submit-action-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #f59e0b;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.submit-action-btn:hover {
+  background: #d97706;
+  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.4);
+}
+
+/* Success State Box */
+.success-state-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-icon-wrap {
+  width: 64px;
+  height: 64px;
+  background: rgba(245, 158, 11, 0.15);
+  color: #d97706;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.success-state-box h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+}
+
+.success-state-box p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+}
+
+.reset-form-btn {
+  background: #f59e0b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.reset-form-btn:hover {
+  background: #d97706;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 900px) {
+  .enquiry-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .enquiry-hero-pane {
+    padding: 36px 20px;
+  }
+
+  .pane-image-wrapper {
+    display: none;
+  }
+
+  .enquiry-form-pane {
+    padding: 32px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .pane-headline {
+    font-size: 1.6rem;
+  }
+}
