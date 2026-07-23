@@ -73,7 +73,7 @@ const Footer = () => {
             <li><a href="#home" className="footer-link">Home</a></li>
             <li><a href="#about" className="footer-link">About</a></li>
             <li><a href="#gallery" className="footer-link">Gallery</a></li>
-            <li><a href="#hosting" className="footer-link">Try Hosting</a></li>
+            {/* <li><a href="#hosting" className="footer-link">Try Hosting</a></li> */}
             <li><a href="#login" className="footer-link">Login</a></li>
           </ul>
         </div>
