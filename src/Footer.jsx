@@ -23,8 +23,8 @@ const Footer = () => {
           </div>
 
           <div className="footer-contact-info">
-            <a href="tel:+917561022227" className="footer-contact-item">
-              <span>+91 7561022227</span>
+            <a href="tel:+910000000000" className="footer-contact-item">
+              <span>+91 00000 00000</span>
             </a>
             <a href="mailto:support@elitetrip.in" className="footer-contact-item">
               <span>support@elitetrip.in</span>
